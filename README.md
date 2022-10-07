@@ -50,7 +50,7 @@ The goal of this technical test is to code a **National Aeronautics and Space Ad
 In this repository's **master** branch you are provided with a clean architechture modular-based boilerplate that allows you to quickly start developing your app in Angular. As advice, we recommend to follow project´s structure and build on modular-based, if modular-based is kind of complex for you ,then, feel free to change and build as you want.
 
   
-You must install any library or dependecie you want to use with **ng-cli** please avoid using CDN´s.
+You must install any library or dependecie you want to use with **npm** please avoid using CDN´s.
 
 Everything related to logos, icons and fonts must be downloaded and used from the `/assets` folder within the project, feel free to use either boostrap, angular material, tailwind, SASS, LESS as CSS frameworks or if you want use pure CSS.
 
