@@ -1,4 +1,4 @@
-# [ORIGEN](http://www.origencorp.net/) - ANGULAR Nasa Technical Test
+# [ORIGEN](http://www.origencorp.net/) - ANGULAR Nasa Technical Test ✍️
 
   
 
@@ -33,7 +33,7 @@ This test is part of ORIGEN's hiring process for a front-end angular developer p
   
   
 
-## Objective
+## Objective 🎯
 
   
 
@@ -43,7 +43,7 @@ The goal of this technical test is to code a **National Aeronautics and Space Ad
 
   
 
-## Structure
+## Structure 🛠️
 
   
 
@@ -56,7 +56,7 @@ Everything related to logos, icons and fonts must be downloaded and used from th
 
   
 
-## API
+## API 🔗
 
   
 
@@ -76,7 +76,7 @@ From your code, you can access to the API at `https://images-api.nasa.gov/` as a
 
   
 
-## What we're expecting
+## What we're expecting 🕵️
 
   
 
@@ -101,16 +101,14 @@ We also expect your code to be a reflection of yourself at work, so we will be a
 
   
 
-## What we're not expecting
+## What we're not expecting 🚩
 
   
 
 We suggest you don't spend too much time on your UI, we know how time intensive it can be. The same can be said for browser compatibility, just make sure your app works in one evergreen browser, like Chrome for instance. Make it simple and yours!
-
-  
   
 
-## Bonus features
+## Bonus features 🌟
 
   
 
@@ -133,7 +131,7 @@ If you have some time left and want to go a little bit further, here are some fe
 
   
 
-## Submission
+## Submission ⌛
 
   
 
