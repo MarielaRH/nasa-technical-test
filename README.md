@@ -135,7 +135,7 @@ If you have some time left and want to go a little bit further, here are some fe
 
 The technical test will be enable on 10/07 at 5:00 pm and the due date to complete this test is this Sunday 10/09 at 5:00 pm.
 
-Once you complete the test, push all the project to *your own repository and make it public* and send to us your reposiritory link to hello@origencorp.net before the time and deadline so that we can clone your project. We will later be scheduling the day and time to conduct the technical interview.
+Once you complete the test, push all the project to **your own repository and make it public** and send to us your reposiritory link to hello@origencorp.net before the time and deadline so that we can clone your project. We will later be scheduling the day and time to conduct the technical interview.
 
  
   
