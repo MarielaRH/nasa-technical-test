@@ -1,0 +1,7 @@
+
+  <div class="p-col-12 information-card" (click)="showDetails(data.nasa_id)">
+      <div class="box" style="border-radius: 10px;">
+        <img [src]="source" alt="fotografía de la nasa" />
+      </div>
+      <p>{{ data.title | uppercase }}</p>
+  </div>
