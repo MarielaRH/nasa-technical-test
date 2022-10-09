@@ -1,15 +1,31 @@
-*{
+* {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
 }
 
-.layout-principal{
+.layout-general{
+    background-color: rgb(28, 28, 49);
+}
+
+.layout-principal {
     min-height: 100vh;
     background-color: #262a2d;
 }
 
-.p-tag{
+.p-tag {
     background: #eee6da !important;
     color: #10284D !important;
+}
+
+.p-toast .p-toast-message.p-toast-message-error {
+    background: #ffe7e6;
+    border: solid #ff5757;
+    border-width: 0 0 0 20px;
+    color: #ff5757;
+}
+
+.p-toast .p-toast-message.p-toast-message-error .p-toast-message-icon,
+.p-toast .p-toast-message.p-toast-message-error .p-toast-icon-close {
+    color: #ff5757;
 }

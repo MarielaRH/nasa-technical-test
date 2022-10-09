@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   declarations: [],
@@ -12,13 +14,17 @@ import { TagModule } from 'primeng/tag';
     FormsModule,
     InputTextModule,
     ButtonModule,
-    TagModule
+    TagModule,
+    MultiSelectModule,
+    ToastModule
   ],
   exports:[
     FormsModule,
     InputTextModule,
     ButtonModule,
-    TagModule
+    TagModule,
+    MultiSelectModule,
+    ToastModule
   ]
 })
 export class PrimengModule { }

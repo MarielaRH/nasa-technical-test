@@ -1,8 +1,27 @@
-<div class="p-col-12 p-p-0 p-grid p-m-0 p-p-3">
-    <action-section class="p-col-12 p-p-0" (handlerLoadRecent)="loadDataRecent()" (handlerLoadPopular)="loadDataPopular()" [isShowRecents]="isShowRecents"></action-section>
-    <ng-container *ngFor="let item of items">
-        <div class="p-col-12 p-sm-6 p-md-4 p-lg-3" *ngIf="item.links">
-            <information-card [source]="item.links[0].href" [data]="item.data[0]"></information-card>
+<app-header></app-header>
+<div class="p-col-12 p-p-0 p-grid p-m-0 p-p-3 p-jc-center p-ai-center">
+    <action-section class="p-col-12 p-p-0" (handlerLoadRecent)="loadDataRecent()"
+        (handlerLoadPopular)="loadDataPopular()" (handlerSearch)="search($event)" [isShowRecents]="isShowRecents">
+    </action-section>
+    <ng-container *ngIf="!loadingData && items && items.length > 0">
+        <ng-container *ngFor="let item of items">
+            <div class="p-col-12 p-sm-6 p-md-4 p-lg-3" *ngIf="item.links">
+                <information-card [source]="item.links[0].href" [data]="item.data[0]"></information-card>
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="!loadingData && (!items || items.length === 0)">
+        <div class="p-col-12 p-d-flex p-flex-column p-jc-center p-ai-center p-p-6 p-m-6">
+            <img src="../../../../assets/img/not-found.png" alt="No se encontraron resultados" width="200">
+            <p style="font-size: 1rem; color: white; font-weight: 550;" class="p-m-0">
+                Lo sentimos no se encontraron coincidencias :(
+            </p>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="loadingData">
+        <div class="p-p-6">
+            <loader></loader>
         </div>
     </ng-container>
 </div>

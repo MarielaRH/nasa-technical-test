@@ -1,12 +1,13 @@
+<app-header></app-header>
 <div class="p-col-12 p-m-0 p-p-2">
     <button pButton pRipple type="button" label="Regresar" icon="pi pi-angle-left" (click)="goToHome()"
         class="p-button-rounded p-mt-3 p-ml-3 p-mr-3 p-mb-0"></button>
-    <div class="p-col-12 p-grid p-m-0 p-p-0 p-jc-center">
+    <div class="p-col-12 p-grid p-m-0 p-p-0 p-jc-center" [ngClass]="loadingSource ? 'hidden' : 'show'">
         <div class="p-p-3 resourse-section">
-            <img [src]="resourse" alt="Detalles de una imagen" *ngIf="data['AVAIL:MediaType'] === mediaType.IMAGE">
-            <video [src]="resourse" controls *ngIf="data['AVAIL:MediaType'] === mediaType.VIDEO"></video>
+            <img #image [src]="resourse ? resourse : 'assets/img/logo-nasa.png'" alt="Detalles de una imagen" *ngIf="data['AVAIL:MediaType'] === mediaType.IMAGE" (load)="resourceLoaded()">
+            <video #video [src]="resourse" controls *ngIf="data['AVAIL:MediaType'] === mediaType.VIDEO" [style]="{'max-width':'600px'}"></video>
         </div>
-        <div class="p-col p-p-3 information-section">
+        <div class="p-col p-p-3 information-section"  *ngIf="!loadingData && !loadingSource">
             <div class="information p-p-3">
                 <p class="p-mt-0 p-mb-3 title">{{data['AVAIL:Title'] | uppercase}}</p>
                 <p class="p-mt-0 p-mb-3">{{data['AVAIL:Description']}}</p>
@@ -24,5 +25,8 @@
                 </span>
             </div>
         </div>
+    </div>
+    <div class="p-col-12 p-d-flex p-ai-center p-jc-center p-p-6" *ngIf="loadingData && loadingSource"  [ngClass]="loadingSource ?  'show' : 'hidden'">
+        <loader></loader>
     </div>
 </div>

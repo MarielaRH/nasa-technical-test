@@ -1,10 +1,15 @@
 <div class="p-col-12 p-grid p-jc-between p-m-0 p-pt-0">
-    <span class="p-input-icon-right p-pt-2">
-        <i class="pi pi-search"></i>
-        <input type="text" pInputText placeholder="Search"/>
-    </span>
+    <div class="p-d-flex">
+        <span class="p-input-icon-right p-pt-2 p-mr-3">
+            <i class="pi pi-times p-pt-1" *ngIf="form.controls.search.value !== null && form.controls.search.value.length !== 0" style="cursor: pointer;" (click)="cleanInput()"></i>
+            <form [formGroup]="form">
+                <input type="text" pInputText placeholder="Buscar" formControlName="search" (keyup)="loadBySearch($event)"/>
+            </form>
+        </span>
+        <!-- <p-multiSelect [options]="mediaTypesOptions" [(ngModel)]="mediaTypeSelected" defaultLabel="Tipo de archivo" optionLabel="key" [filter]="false" selectedItemsLabel="{0} items selected" class="p-pt-2" [style]="{'min-width': '200px'}" (onChange)="onSelectedMediaType()"></p-multiSelect> -->
+    </div>
 
-    <div class="p-d-flex p-pt-2 container-buttons">
+    <div class="p-d-flex p-pt-2 container-buttons" *ngIf="showActions">
         <button pButton pRipple type="button" label="Recientes" (click)="loadDataRecent()"
             class="p-button-rounded p-mr-3"
             [ngClass]="isShowRecents ? 'p-button-primary' : 'p-button-secondary'"></button>

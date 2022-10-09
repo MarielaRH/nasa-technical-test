@@ -29,3 +29,21 @@ video {
     border-radius: 10px;
     width: 100%;
 }
+
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+}
+.show{
+   animation: show-element 1s;
+}
+@keyframes show-element {
+    from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+

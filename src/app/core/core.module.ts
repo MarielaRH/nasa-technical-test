@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PrimengModule } from '../primeng/primeng.module';
 import { InformationCardComponent } from './components/information-card/information-card.component';
 import { ActionSectionComponent } from './components/action-section/action-section.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -18,12 +19,15 @@ import { ActionSectionComponent } from './components/action-section/action-secti
     ItemDetailComponent,
     NotFoundComponent,
     InformationCardComponent,
-    ActionSectionComponent
+    ActionSectionComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
     CoreRoutingModule,
-    PrimengModule
+    PrimengModule,
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class CoreModule { }

@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { MessageService } from 'primeng/api';
+import { PrimengModule } from './primeng/primeng.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,9 +19,10 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    PrimengModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
