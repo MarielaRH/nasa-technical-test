@@ -1,23 +1,38 @@
 .box {
+  border-radius: 10px 10px 0px 0px;
   height: 250px;
   overflow: hidden;
+
   & img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top top;
+    width: 100%;
   }
 }
 
-.information-card{
-    height: 100%;
-    background-color: rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 15px;
-    cursor: pointer;
+.information-card {
+  background: #1a1d1f;
+  border-radius: 11px;
+  height: 100%;
+  padding: 0px 0px 15px;
+  cursor: pointer;
 
-    & p {
-        font-size: 0.7rem;
-        // color: white;
-    }
+  & p {
+    color: #d8514e;
+    font-size: 0.76rem;
+    font-weight: bolder;
+    margin: 0px;
+    padding: 10px 10px 0px 10px;
+  }
+}
+
+span {
+  backdrop-filter: blur(1px);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  -webkit-backdrop-filter: blur(18px);
 }

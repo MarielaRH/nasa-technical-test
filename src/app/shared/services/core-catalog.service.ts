@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Assets } from '../interfaces/assets';
 import { environment } from '../../../environments/environment';
-import { Detail } from '../interfaces/detail';
+import { urlDetail, Detail } from '../interfaces/detail';
 
 const URL = environment.apiUrl;
 const URL_ASSESTS = environment.apiUrlAssets;
@@ -19,7 +19,15 @@ export class CoreCatalogService {
     return this.http.get<Assets>(`${URL_ASSESTS}/${url}`);
   }
 
-  getItemDetail(url: string){
-    return this.http.get<Detail>(`${URL}/metadata/${url}`);
+  getUrlDetail(url: string){
+    return this.http.get<urlDetail>(`${URL}/metadata/${url}`);
+  }
+
+  getResource(id: string){
+     return this.http.get<Assets>(`${URL}/asset/${id}`);
+  }
+
+  getInfoDetail(url: string, base?: string){
+    return this.http.get<Detail>(`${url}`);
   }
 }

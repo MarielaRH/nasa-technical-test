@@ -1,14 +1,14 @@
-<div class="p-col-12 p-grid p-jc-between p-m-0">
+<div class="p-col-12 p-grid p-jc-between p-m-0 p-pt-0">
     <span class="p-input-icon-right p-pt-2">
         <i class="pi pi-search"></i>
-        <input type="text" pInputText placeholder="Search" />
+        <input type="text" pInputText placeholder="Search"/>
     </span>
 
     <div class="p-d-flex p-pt-2 container-buttons">
         <button pButton pRipple type="button" label="Recientes" (click)="loadDataRecent()"
             class="p-button-rounded p-mr-3"
-            [ngClass]="isShowRecents ? 'p-button-success' : 'p-button-secondary'"></button>
+            [ngClass]="isShowRecents ? 'p-button-primary' : 'p-button-secondary'"></button>
         <button pButton pRipple type="button" label="Populares" (click)="loadDataPopular()" class="p-button-rounded"
-            [ngClass]="isShowRecents ? 'p-button-secondary' : 'p-button-success'"></button>
+            [ngClass]="isShowRecents ? 'p-button-secondary' : 'p-button-primary'"></button>
     </div>
 </div>

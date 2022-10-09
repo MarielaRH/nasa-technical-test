@@ -1,7 +1,12 @@
 
   <div class="p-col-12 information-card" (click)="showDetails(data.nasa_id)">
-      <div class="box" style="border-radius: 10px;">
-        <img [src]="source" alt="fotografía de la nasa" />
-      </div>
-      <p>{{ data.title | uppercase }}</p>
+    <div style="position: relative">
+      <span class="p-p-3 p-d-flex p-jc-center p-ai-center" *ngIf="data.media_type === mediaType.VIDEO">
+        <i class="pi pi-video" style="color: black; font-weight: 550; font-size: 1.2rem;"></i>
+      </span>
+        <div class="box">
+          <img [src]="source ? source : ''" alt="fotografía de la nasa" />
+        </div>
+        <p>{{ data && data.title ?  data.title : ''| uppercase }}</p>
+    </div>
   </div>

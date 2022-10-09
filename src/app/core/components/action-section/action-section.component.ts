@@ -13,8 +13,7 @@ export class ActionSectionComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   loadDataRecent(){
     this.handlerLoadRecent.emit();

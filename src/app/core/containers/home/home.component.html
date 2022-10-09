@@ -1,7 +1,7 @@
-<div class="p-col-12 p-p-0 p-grid p-m-0">
-    <action-section class="p-col-12" (handlerLoadRecent)="loadDataRecent()" (handlerLoadPopular)="loadDataPopular()" [isShowRecents]="isShowRecents"></action-section>
+<div class="p-col-12 p-p-0 p-grid p-m-0 p-p-3">
+    <action-section class="p-col-12 p-p-0" (handlerLoadRecent)="loadDataRecent()" (handlerLoadPopular)="loadDataPopular()" [isShowRecents]="isShowRecents"></action-section>
     <ng-container *ngFor="let item of items">
-        <div class="p-col-12 p-sm-6 p-md-4 p-lg-3">
+        <div class="p-col-12 p-sm-6 p-md-4 p-lg-3" *ngIf="item.links">
             <information-card [source]="item.links[0].href" [data]="item.data[0]"></information-card>
         </div>
     </ng-container>

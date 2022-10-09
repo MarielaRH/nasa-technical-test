@@ -1,0 +1,31 @@
+.title {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #f9d390;
+}
+
+.information-section, .resourse-section{
+    min-width: 400px;
+}
+
+.information {
+    color: #eee6da;
+    font-size: 0.95rem;
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 400px;
+}
+
+video {
+    border-radius: 10px;
+    width: 100%;
+}

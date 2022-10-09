@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   items: Item[] = [];
   isShowRecents: boolean = true;
 
-  constructor(private coreService: CoreCatalogService) { }
+  constructor(private coreCatalogService: CoreCatalogService) { }
 
   ngOnInit(): void {
     this.loadDataRecent();
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   loadDataRecent(){
     this.isShowRecents = true;
-    this.coreService.getData('recent.json').subscribe(response => {
+    this.coreCatalogService.getData('recent.json').subscribe(response => {
       this.items = [];
       this.items = response.collection.items;
     })
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   loadDataPopular(){
     this.isShowRecents = false;
-    this.coreService.getData('popular.json').subscribe(response => {
+    this.coreCatalogService.getData('popular.json').subscribe(response => {
       this.items = [];
       this.items = response.collection.items;
     })
